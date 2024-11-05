@@ -31,6 +31,7 @@ class User(BaseModel):
 class Settings(BaseModel):
     id = CharField(primary_key=True, max_length=36, default=lambda: str(uuid.uuid4()))
     telegramChatId = CharField(max_length=255, null=True)
+    telegramSendMessage = BooleanField(default=False)
     userId = ForeignKeyField(
         User, field='id', 
         column_name='userId', 
