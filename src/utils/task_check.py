@@ -2,9 +2,7 @@ import asyncio
 from html import escape 
 
 from datetime import datetime
-from aiogram import Bot, Dispatcher
 from db.get_cases import get_tasks_by_time  # Импорт функции для получения задач
-from aiogram.types import Message
 
 from bot_instance import bot  # Импорт объекта bot
 
